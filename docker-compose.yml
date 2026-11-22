@@ -1,9 +1,18 @@
 version: '3.8'
 
 services:
+<<<<<<< HEAD
   nginx:
     build: .
     ports:
       - "80:80"
       - "443:443"
     restart: always
+=======
+  api:
+    build: .
+    env_file:
+      - .env
+    restart: always
+    network_mode: host
+>>>>>>> e19f96091bd49a0ef3171a14931847aa4bc67709
