@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>CN Lab Project - bscs25131</title></head>
+<body>
+  <h1>CN Lab Project</h1>
+  <p>Student: bscs25131 | VM1: 192.168.31.10 | VM2: 192.168.31.20</p>
+  <div id="result"></div>
+  <script>
+    fetch('/api/v1/health')
+      .then(r => r.json())
+      .then(d => document.getElementById('result').innerHTML =
+        'API Status: <b>OK</b> | DB: ' + d.db + ' | Host: ' + d.hostname);
+  </script>
+</body>
+</html>
